@@ -12,11 +12,16 @@
       line-height: 1.6;
       padding: 0;
       margin: 0;
+      background-image: url('https://raw.githubusercontent.com/rryan17/BerryPatch/main/assets/background-berries-vines.png');
+      background-repeat: repeat;
+      background-size: 300px;
     }
     header, nav, main, footer {
       padding: 20px;
       max-width: 900px;
       margin: 0 auto;
+      background-color: rgba(253, 252, 244, 0.95);
+      border-radius: 10px;
     }
     header {
       background-color: #e9f5e9;
@@ -39,10 +44,15 @@
       font-size: 2.5em;
       margin: 0;
     }
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
     nav a {
       margin: 0 10px;
       color: #4c6a4c;
       text-decoration: none;
+      font-weight: bold;
     }
     section {
       margin-bottom: 40px;
@@ -50,6 +60,7 @@
     h2 {
       color: #4c6a4c;
       border-bottom: 1px solid #d0e5d0;
+      font-family: 'Georgia', serif;
     }
     .placeholder-img, img.placeholder-img {
       width: 100%;
@@ -62,11 +73,50 @@
       text-align: center;
       color: #7a7a52;
     }
+    form {
+      background-color: #f0f9f0;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px dashed #aad4a1;
+      background-image: url('https://raw.githubusercontent.com/rryan17/BerryPatch/main/assets/flowers-brushstroke.png');
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-size: 120px;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: 'Georgia', serif;
+    }
+    form input[type="submit"] {
+      background-color: #aad4a1;
+      color: #3d3d29;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 15px;
+      font-size: 1em;
+      font-family: 'Georgia', serif;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form input[type="submit"]:hover {
+      background-color: #8fc88f;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo-placeholder.png" alt="Berry Patch Logo" class="logo" />
+    <img src="logo-concept4-placeholder.png" alt="Berry Patch Logo: Child with Berry Branch and Chicken" class="logo" />
     <img src="banner-placeholder.jpg" alt="Berry Patch Banner" class="banner" />
     <h1>The Berry Patch</h1>
     <p>A homegrown nature-based childcare program</p>
@@ -150,9 +200,22 @@
 
     <section id="contact">
       <h2>Contact Us</h2>
-      <p><strong>Email:</strong> missrachael@berrypatch.com</p>
-      <p><strong>Phone:</strong> (123) 456-7890</p>
-      <p><strong>Location:</strong> Saint Paul, MN</p>
+      <p><strong>Contact:</strong> Miss Rachael</p>
+      <p><strong>Cell:</strong> <a href="tel:6123108706">(612) 310-8706</a></p>
+      <p><strong>Email:</strong> <a href="mailto:rachaelryan17@gmail.com">rachaelryan17@gmail.com</a></p>
+      <p><strong>Location:</strong> 952 May Street, Saint Paul, MN 55116</p>
+      <form action="mailto:rachaelryan17@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea><br />
+
+        <input type="submit" value="Send Message">
+      </form>
     </section>
   </main>
 
