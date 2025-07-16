@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet" />
 
   <style>
-    /* Typography */
+    /* Typography and basic styles */
     body {
       font-family: "Georgia", serif;
       background-color: #fdfcf4;
@@ -38,8 +38,7 @@
       font-size: 1.1em;
     }
 
-    /* Layout */
-    header, nav, main, footer {
+    header, main, footer {
       max-width: 900px;
       margin: 0 auto;
       background-color: rgba(253, 252, 244, 0.95);
@@ -71,32 +70,39 @@
 
     /* Navigation */
     nav {
-      position: sticky;
-      top: 0;
       background-color: #e9f5e9cc;
-      padding: 15px 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px 0;
       border-radius: 0 0 10px 10px;
-      z-index: 1000;
       text-align: center;
+      margin-bottom: 20px;
     }
-    nav a {
+    nav button {
+      background: none;
+      border: none;
       margin: 0 15px;
-      color: #4c6a4c;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
       font-size: 1.1em;
+      font-weight: 600;
+      color: #4c6a4c;
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-family: 'Open Sans', sans-serif;
     }
-    nav a:hover,
-    nav a:focus {
-      color: #7a9a58;
-      text-decoration: underline;
+    nav button:hover,
+    nav button:focus,
+    nav button.active {
+      background-color: #aad4a1;
+      color: #3d3d29;
+      outline: none;
     }
 
     /* Sections */
     section {
-      margin-bottom: 40px;
+      display: none; /* Hide all by default */
+    }
+    section.active {
+      display: block; /* Show only active */
     }
     h2 {
       color: #4c6a4c;
@@ -128,12 +134,11 @@
       object-fit: cover;
     }
 
-    /* Lists */
     ul {
       padding-left: 1.3em;
     }
 
-    /* Form styling */
+    /* Form */
     form {
       background-color: #f0f9f0;
       padding: 20px;
@@ -202,9 +207,10 @@
 
     /* Responsive */
     @media (max-width: 600px) {
-      nav a {
+      nav button {
         display: block;
-        margin: 8px 0;
+        margin: 8px auto;
+        width: 90%;
       }
       header h1 {
         font-size: 2.2em;
@@ -228,16 +234,16 @@
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#programs">Programs</a>
-    <a href="#farm">Meet the Farm</a>
-    <a href="#playground">Meet the Playground</a>
-    <a href="#registration">Registration</a>
-    <a href="#contact">Contact</a>
+    <button class="tab-btn active" data-target="about">About</button>
+    <button class="tab-btn" data-target="programs">Programs</button>
+    <button class="tab-btn" data-target="farm">Meet the Farm</button>
+    <button class="tab-btn" data-target="playground">Meet the Playground</button>
+    <button class="tab-btn" data-target="registration">Registration</button>
+    <button class="tab-btn" data-target="contact">Contact</button>
   </nav>
 
   <main>
-    <section id="about">
+    <section id="about" class="active">
       <h2>About Us</h2>
       <p>Welcome to <strong>The Berry Patch</strong>, a home-based childcare program rooted in nature, wonder, and connection. We believe in the magic of childhood — muddy boots, curious questions, and caring hearts. Here at the Berry Patch, we center our days around plants, animals, growth, good food, and even better company.</p>
       <p>We strive to <strong>slow down</strong> — to give children the space to take their time, notice the little things, and savor each season. Our projects are often long and layered — from seed to root to harvest, from scrap wood to treehouse. We believe that when kids are given time and trust, they build patience, pride, and deep understanding.</p>
@@ -327,6 +333,32 @@
   <footer>
     <p>&copy; 2025 The Berry Patch. All rights reserved.</p>
   </footer>
+
+  <script>
+    // JavaScript for tab functionality
+    const tabs = document.querySelectorAll('nav button.tab-btn');
+    const sections = document.querySelectorAll('main section');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs
+        tabs.forEach(t => t.classList.remove('active'));
+        // Add active class to clicked tab
+        tab.classList.add('active');
+
+        const targetId = tab.getAttribute('data-target');
+        // Show the selected section, hide others
+        sections.forEach(section => {
+          if(section.id === targetId) {
+            section.classList.add('active');
+          } else {
+            section.classList.remove('active');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+
 
