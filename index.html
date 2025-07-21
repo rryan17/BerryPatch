@@ -2,102 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Berry Patch Farm School</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berry Patch Farm School | Enrollment</title>
   <style>
     body {
+      font-family: "Georgia", serif;
+      background-color: #fdf6f0;
+      color: #4a3c2f;
+      line-height: 1.6;
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f4f4f4;
-      color: #111;
+      padding: 0;
     }
-
     header {
-      background: linear-gradient(#eee, #ddd);
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      background-color: #d2e6d1;
+      padding: 2rem;
+      text-align: center;
     }
-
-    .logo {
-      font-size: 1.5rem;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .tuition-box, .enrollment-steps, .open-house-section {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #3e5d3e;
+      font-size: 1.8rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .calendar-button {
+      display: inline-block;
+      background-color: #b94444;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
       font-weight: bold;
     }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #111;
-      font-weight: 500;
+    .open-house-wrapper {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px 20px;
-      background-color: #e6e6e6;
+    .left-box, .right-box {
+      flex: 1 1 300px;
+      background-color: #faf3e0;
+      padding: 1.2rem;
+      border-radius: 10px;
     }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+    .left-box {
+      border: 2px solid #d4af7f;
     }
-
-    .hero img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    .intro {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        margin-top: 15px;
-      }
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-      .hero h1 {
-        font-size: 2rem;
-      }
+    .right-box ul {
+      list-style: square;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Enrollment is OPEN for the 2025–2026 Farm School Year</h1>
+    <a href="#" class="calendar-button">View Seasonal Calendar</a>
+  </header>
 
-<header>
-  <div class="logo">Berry Patch</div>
-  <nav>
-    <a href="#">Enrollment</a>
-    <a href="#">About</a>
-    <a href="#">Programs</a>
-    <a href="#">Meet the Farm</a>
-    <a href="#">Meet the Playground</a>
-    <a href="#">What’s Growing?</a>
-    <a href="#">FAQs</a>
-    <a href="#">Contact</a>
-    <a href="#">Login</a>
-  </nav>
-</header>
+  <div class="container">
 
-<section class="hero">
-  <h1>Welcome to Berry Patch Farm School</h1>
-  <img src="Website_Home.png" alt="Berry Patch landscape" />
-</section>
+    <section class="tuition-box">
+      <h2>Tuition</h2>
+      <p><strong>$320/month per child</strong></p>
+      <p>This breaks down to $80 per week for two mornings filled with farm care, garden play, nature crafts, animal visits, and joyful discovery.</p>
 
-<section class="intro">
-  <p>Welcome to <strong>Berry Patch Farm School</strong>. We are a nature-rich, in-home program for young children ages 2–5 years. We will be opening soon in Highland Park, Saint Paul. Join us in a joyful space full of imagination, mud, berries, chickens, and childhood wonder.</p>
-</section>
+      <h2>Payment Information</h2>
+      <p>At The Berry Patch, we like to keep things simple and personal. Tuition is collected monthly, and we kindly accept cash or check only.</p>
+      <p>This helps us avoid pesky processing fees — making sure more of your contribution goes directly toward nourishing the garden, caring for the animals, and growing joyful experiences for your child. Your tuition will not change while your child is enrolled.</p>
 
+      <h2>Enrollment Fee</h2>
+      <p>A one-time $75 enrollment fee secures your child's spot in the program and helps us prepare all the magical materials they'll need — from garden tools and seeds to muddy boots and berry baskets.</p>
+    </section>
+
+    <section class="enrollment-steps">
+      <h2>How to Enroll</h2>
+      <ol>
+        <li>Complete the <a href="#">Registration Form</a></li>
+        <li>Schedule a visit with Miss Rachael or come to an Open House (scroll down for more info)</li>
+        <li>Get ready for a season of mud pies, chicken cuddles, garden magic, and memories that last!</li>
+      </ol>
+    </section>
+
+    <section class="open-house-section">
+      <h2>Open House Info</h2>
+      <div class="open-house-wrapper">
+        <div class="left-box">
+          <p><strong>Our Open Houses</strong> are held on the first Tuesday of the month from 12:30–1:30pm.</p>
+          <p>No appointment needed — just swing by the Berry Patch!</p>
+        </div>
+        <div class="right-box">
+          <h3>Upcoming Open House Dates:</h3>
+          <ul>
+            <li>September 2, 2025</li>
+            <li>October 7, 2025</li>
+            <li>November 4, 2025</li>
+            <li>December 2, 2025</li>
+            <li>January 6, 2026</li>
+            <li>February 3, 2026</li>
+            <li>March 3, 2026</li>
+            <li>April 7, 2026</li>
+            <li>May 5, 2026</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
 </body>
 </html>
