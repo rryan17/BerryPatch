@@ -2,364 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Berry      sdgsdPatch</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Berry Patch Farm School</title>
   <style>
-    /* Typography and basic styles */
     body {
-      cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAXVBMVEUAAAD////8/Pz7+/v4+Pjp6en19fXv7++3t7e+vr6ZmZnU1NTk5OTf399/f39aWloaGho+Pj4yMjIxMTHJycnKysrHx8exsbGJiYmOjo5NTU2FhYWBgYETExMpKSkpLS0rOzs7Dw8OUlJRlZWVqamq9+eNnAAAALHRSTlMAAQIDBAYICQoLDQ4PEBESFBUWGhkfICEhJSgoKSorLS4vMDFCQkNERUdISUpLTU5QHxN3MwAAAM1JREFUOMu1klsOgyAMhJNU2FYa9uL4P//W3JQw0MjA4rvk2l+E/cE7Q7u3tYbw3Lja45hCJpFVFlcAxQGYcAKJbGO5vKl+MkfGpa6jpLHRbLZbNYPKhwawYkqQ2iALvS0pHtYo7+u6owAw8A1JdOVf9klZxbS7WGr0iy9Av6Bi2Jo1/mLxEo3hzSxOkG6VqNYAAVv3PrwiSpDS+BDzjLGhwZQOx+IBBoB5mI2HOV2lAH1V07LU6D9KwBU6A3zJ+jQIBQn6zvAAfBu49KZXcScAAAAASUVORK5CYII='), auto;
-      font-family: "Georgia", serif;
-      background-color: #fdfcf4;
-      color: #3d3d29;
-      line-height: 1.6;
-      padding: 0;
       margin: 0;
-      background-image: url('https://raw.githubusercontent.com/rryan17/BerryPatch/main/assets/background-berries-vines.png');
-      background-repeat: repeat;
-      background-size: 300px;
-    }
-    nav, footer, form, nav a {
-      font-family: 'Open Sans', sans-serif;
-    }
-    header h1 {
-      font-family: 'Pacifico', cursive;
-      font-size: 3em;
-      margin: 0.2em 0 0.1em;
-      color: #4c6a4c;
-      text-shadow: 1px 1px 2px #aad4a1;
-    }
-    header p {
-      font-style: italic;
-      color: #7a7a52;
-      margin-top: 0;
-      font-size: 1.1em;
-    }
-
-    header, main, footer {
-      max-width: 900px;
-      margin: 0 auto;
-      background-color: rgba(253, 252, 244, 0.95);
-      border-radius: 10px;
-      padding: 20px;
-      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #111;
     }
 
     header {
-      background-color: #e9f5e9;
-      border-bottom: 2px dashed #aad4a1;
-      text-align: center;
-      position: relative;
+      background: linear-gradient(#eee, #ddd);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    header img.logo {
-      width: 80px;
-      height: auto;
-      display: block;
-      margin: 0 auto 10px;
-    }
-    header .banner {
-      width: 100%;
-      height: auto;
-      margin-bottom: 10px;
-      border-radius: 10px;
-      object-fit: cover;
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
     }
 
-    /* Navigation */
-    nav {
-      background-color: #e9f5e9cc;
-      padding: 10px 0;
-      border-radius: 0 0 10px 10px;
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+
+    .hero {
       text-align: center;
+      padding: 60px 20px 20px;
+      background-color: #e6e6e6;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
       margin-bottom: 20px;
     }
-    nav button {
-      background: none;
-      border: none;
-      margin: 0 15px;
-      font-size: 1.1em;
-      font-weight: 600;
-      color: #4c6a4c;
-      cursor: pointer;
-      padding: 8px 16px;
-      border-radius: 6px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      font-family: 'Open Sans', sans-serif;
-    }
-    nav button:hover,
-    nav button:focus,
-    nav button.active {
-      background-color: #aad4a1;
-      color: #3d3d29;
-      outline: none;
-    }
 
-    /* Sections */
-    section {
-      display: none; /* Hide all by default */
-    }
-    section.active {
-      display: block; /* Show only active */
-    }
-    h2 {
-      color: #4c6a4c;
-      border-bottom: 1px solid #d0e5d0;
-      font-family: 'Georgia', serif;
-      padding-bottom: 5px;
-    }
-    h3 {
-      color: #6b8a4a;
-      font-family: 'Georgia', serif;
-      margin-top: 1.5em;
-    }
-    p, li {
-      font-size: 1.05em;
-    }
-
-    /* Images */
-    .placeholder-img, img.placeholder-img {
-      width: 100%;
-      max-width: 600px;
+    .hero img {
+      max-width: 90%;
       height: auto;
-      border: 2px dashed #c5d8b2;
-      padding: 10px;
-      margin: 10px 0;
-      background-color: #f6fbf6;
-      text-align: center;
-      color: #7a7a52;
       border-radius: 8px;
-      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    ul {
-      padding-left: 1.3em;
+    .intro {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      font-size: 1.2rem;
+      line-height: 1.6;
     }
 
-    /* Form */
-    form {
-      background-color: #f0f9f0;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px dashed #aad4a1;
-      background-image: url('https://raw.githubusercontent.com/rryan17/BerryPatch/main/assets/flowers-brushstroke.png');
-      background-position: top right;
-      background-repeat: no-repeat;
-      background-size: 120px;
-      max-width: 600px;
-      margin: 0 auto;
-      box-sizing: border-box;
-    }
-    form label {
-      display: block;
-      margin-top: 10px;
-      font-weight: 600;
-      color: #4c6a4c;
-    }
-    form input[type="text"],
-    form input[type="email"],
-    form textarea {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-family: 'Open Sans', sans-serif;
-      font-size: 1em;
-      box-sizing: border-box;
-    }
-    form textarea {
-      resize: vertical;
-    }
-    form input[type="submit"] {
-      background-color: #aad4a1;
-      color: #3d3d29;
-      border: none;
-      padding: 12px 25px;
-      margin-top: 15px;
-      font-size: 1.1em;
-      border-radius: 5px;
-      cursor: pointer;
-      font-family: 'Open Sans', sans-serif;
-      font-weight: 700;
-      transition: background-color 0.3s ease;
-      display: block;
-      width: 100%;
-    }
-    form input[type="submit"]:hover,
-    form input[type="submit"]:focus {
-      background-color: #8fc88f;
-      outline: none;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      color: #7a7a52;
-      font-size: 0.9em;
-      margin: 20px auto;
-      max-width: 900px;
-      padding: 10px 20px;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      nav button {
+    @media (max-width: 768px) {
+      nav {
+        margin-top: 15px;
+      }
+      nav a {
         display: block;
-        margin: 8px auto;
-        width: 90%;
+        margin: 10px 0;
       }
-      header h1 {
-        font-size: 2.2em;
-      }
-      form {
-        width: 90%;
-        padding: 15px;
-      }
-      .placeholder-img {
-        max-width: 100%;
+      .hero h1 {
+        font-size: 2rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo-concept4-placeholder.png" alt="Berry Patch Logo: Child with Berry Branch and Chicken" class="logo" />
-    <img src="banner-placeholder.jpg" alt="Berry Patch Banner" class="banner" />
-    <h1>The Berry Patch</h1>
-    <p>A homegrown nature-based childcare program</p>
-  </header>
 
+<header>
+  <div class="logo">Berry Patch</div>
   <nav>
-    <button class="tab-btn active" data-target="about">About</button>
-    <button class="tab-btn" data-target="programs">Programs</button>
-    <button class="tab-btn" data-target="farm">Meet the Farm</button>
-    <button class="tab-btn" data-target="playground">Meet the Playground</button>
-    <button class="tab-btn" data-target="registration">Registration</button>
-    <button class="tab-btn" data-target="contact">Contact</button>
+    <a href="#">Enrollment</a>
+    <a href="#">About</a>
+    <a href="#">Programs</a>
+    <a href="#">Meet the Farm</a>
+    <a href="#">Meet the Playground</a>
+    <a href="#">What’s Growing?</a>
+    <a href="#">FAQs</a>
+    <a href="#">Contact</a>
+    <a href="#">Login</a>
   </nav>
+</header>
 
-  <main>
-    <section id="about" class="active">
-      <h2>About Us</h2>
-      <p>Welcome to <strong>The Berry Patch</strong>, a home-based childcare program rooted in nature, wonder, and connection. We believe in the magic of childhood — muddy boots, curious questions, and caring hearts. Here at the Berry Patch, we center our days around plants, animals, growth, good food, and even better company.</p>
-      <p>We strive to <strong>slow down</strong> — to give children the space to take their time, notice the little things, and savor each season. Our projects are often long and layered — from seed to root to harvest, from scrap wood to treehouse. We believe that when kids are given time and trust, they build patience, pride, and deep understanding.</p>
-      <p>Our philosophy is simple: <strong>follow the joy</strong>. If something sparks curiosity or lights up a smile — we follow that path. Through playful exploration and meaningful moments on our farm, we aim to nurture a love of the natural world, spark wonder, and foster empathy in every child.</p>
-      <blockquote>“Let them be little. Let them be wild. Let them be free.”</blockquote>
-    </section>
+<section class="hero">
+  <h1>Welcome to Berry Patch Farm School</h1>
+  <img src="Website_Home.png" alt="Berry Patch landscape" />
+</section>
 
-    <section id="programs">
-      <h2>Programs</h2>
-      <p><strong>Schedule:</strong> Tuesdays & Thursdays, 9:00 AM – 12:00 PM</p>
-      <p><strong>Ages:</strong> 2–5 years old (no need to be fully potty trained)</p>
-      <p><strong>Tuition:</strong> $___/month (please contact for current rate)</p>
+<section class="intro">
+  <p>Welcome to <strong>Berry Patch Farm School</strong>. We are a nature-rich, in-home program for young children ages 2–5 years. We will be opening soon in Highland Park, Saint Paul. Join us in a joyful space full of imagination, mud, berries, chickens, and childhood wonder.</p>
+</section>
 
-      <h3>Daily Rhythm</h3>
-      <ul>
-        <li><strong>9:00 AM</strong> — Welcome & Free Play</li>
-        <li><strong>9:30 AM</strong> — Circle Time</li>
-        <li><strong>9:50 AM</strong> — Bathroom Break & Handwashing</li>
-        <li><strong>10:00 AM</strong> — Snack Time</li>
-        <li><strong>10:20 AM</strong> — Farm Care (feeding chickens, gathering eggs, watering plants)</li>
-        <li><strong>10:45 AM</strong> — Nature Activity or Project Time</li>
-        <li><strong>11:30 AM</strong> — Closing Circle & Goodbye Prep</li>
-        <li><strong>12:00 PM</strong> — Pick-up</li>
-      </ul>
-
-      <h3>Growing With Us</h3>
-      <p>Each child will have their own garden bed to tend and will get to choose what to grow. Additionally, each child will grow their favorite snack. For example, if they love sweet popcorn, we’ll plant popping corn in the spring and harvest it in the fall. Come early spring, we’ll tap our maple trees and make syrup to drizzle on top — a snack that grows with us all year long.</p>
-      <p>Children are also invited to grow a food they don’t like — transforming <strong>yuck to yum</strong> through care, curiosity, and a little dirt under their fingernails.</p>
-
-      <h3>Seasonal Calendar Preview</h3>
-      <p><strong>Fall:</strong> Apple tasting, leaf crowns, bug hunts, pumpkin washing, gourd painting</p>
-      <p><strong>Winter:</strong> Ice lanterns, snow painting, pine forts, warm tea & stories, cozy crafts</p>
-      <p><strong>Spring:</strong> Seed planting, worm digging, paint with nature, hug-a-bug day, mud kitchen</p>
-      <p><strong>Summer:</strong> Berry picking, jam making, fairy house building, ice cream, water play</p>
-    </section>
-
-    <section id="farm">
-      <h2>Meet the Farm</h2>
-      <p>Photos and stories coming soon — meet Daisy the goat who loves chin scratches, Lucy the chicken (our egg inspector), and more friendly farm friends!</p>
-      <img src="lilly-dog.jpeg" alt="Lilly the Dog" class="placeholder-img" />
-      <img src="falcore-chicken.jpeg" alt="Falcore the Chicken" class="placeholder-img" />
-      <img src="gandolf-chicken.jpeg" alt="Gandolf the Chicken" class="placeholder-img" />
-      <img src="ghost-chicken.jpeg" alt="Ghost the Chicken" class="placeholder-img" />
-      <img src="goldie-chicken.jpeg" alt="Goldie the Chicken" class="placeholder-img" />
-      <img src="hocus-pocus-chicken.jpeg" alt="Hocus Pocus the Chicken" class="placeholder-img" />
-    </section>
-
-    <section id="playground">
-      <h2>Meet the Playground</h2>
-      <p>Our natural play space includes a wildflower orchard, children's garden beds, a mud kitchen, and more. Picture gallery coming soon!</p>
-      <img src="orchard-view1.jpeg" alt="Orchard View" class="placeholder-img" />
-      <img src="tree-ring.jpeg" alt="Tree Ring Play Area" class="placeholder-img" />
-      <img src="muddy-boots.jpeg" alt="Muddy Boots by the Garden" class="placeholder-img" />
-      <img src="flower-garden.jpeg" alt="Flower Garden" class="placeholder-img" />
-      <img src="strawberry-tower-plants.jpeg" alt="Strawberry Tower" class="placeholder-img" />
-      <img src="tomotoes-beans-plants.jpeg" alt="Tomatoes and Beans" class="placeholder-img" />
-      <img src="sunflower-plant.jpeg" alt="Sunflower Plant" class="placeholder-img" />
-    </section>
-
-    <section id="registration">
-      <h2>Registration</h2>
-      <p>Please download and complete our registration form. You may submit it via email or bring it in person at your tour.</p>
-      <p><a href="#">Download Fillable PDF</a> | <a href="#">Download Printable PDF</a></p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p><strong>Contact:</strong> Miss Rachael</p>
-      <p><strong>Cell:</strong> <a href="tel:6123108706">(612) 310-8706</a></p>
-      <p><strong>Email:</strong> <a href="mailto:rachaelryan17@gmail.com">rachaelryan17@gmail.com</a></p>
-      <p><strong>Location:</strong> 952 May Street, Saint Paul, MN 55116</p>
-      <form action="mailto:rachaelryan17@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Name:</label><br />
-        <input type="text" id="name" name="name" required><br />
-
-        <label for="email">Email:</label><br />
-        <input type="email" id="email" name="email" required><br />
-
-        <label for="message">Message:</label><br />
-        <textarea id="message" name="message" rows="5" required></textarea><br />
-
-        <input type="submit" value="Send Message">
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 The Berry Patch. All rights reserved.</p>
-  </footer>
-
-  <script>
-    // JavaScript for tab functionality
-    const tabs = document.querySelectorAll('nav button.tab-btn');
-    const sections = document.querySelectorAll('main section');
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        // Remove active class from all tabs
-        tabs.forEach(t => t.classList.remove('active'));
-        // Add active class to clicked tab
-        tab.classList.add('active');
-
-        const targetId = tab.getAttribute('data-target');
-        // Show the selected section, hide others
-        sections.forEach(section => {
-          if(section.id === targetId) {
-            section.classList.add('active');
-          } else {
-            section.classList.remove('active');
-          }
-        });
-      });
-    });
-  </script>
 </body>
 </html>
-
-
