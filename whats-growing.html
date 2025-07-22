@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berry Patch Farm School | What's Growing?</title>
+  <style>
+    body {
+      font-family: "Georgia", serif;
+      background-color: #fdf6f0;
+      color: #4a3c2f;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: url('grapevine-plants.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 5rem 2rem;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      text-shadow: 2px 2px 4px #5a3d2b;
+    }
+    header p {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      text-shadow: 1px 1px 2px #5a3d2b;
+    }
+    nav {
+      background-color: #b8d8ba;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.75rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #3e5d3e;
+      font-weight: bold;
+    }
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      width: 100%;
+      transition: transform 1s ease-in-out;
+    }
+    .slides img {
+      min-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .footer {
+      background-color: #eee;
+      display: flex;
+      justify-content: space-around;
+      padding: 2rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+    .footer div {
+      margin-bottom: 1rem;
+      min-width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>What's Growing?</h1>
+    <p>Take a look at what we are growing in the Berry Patch.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="enrollment.html">Enrollment</a>
+    <a href="contact.html">Contact</a>
+    <a href="farm.html">Meet the Farm</a>
+    <a href="playground.html">Meet the Playground</a>
+  </nav>
+
+  <div class="slideshow-container">
+    <div class="slides" id="slideShow">
+      <img src="tomato-harvest.jpeg" alt="Tomato Harvest">
+      <img src="strawberry-plants.jpeg" alt="Strawberry Plants">
+      <img src="grapevine-plants.jpeg" alt="Grapevine">
+      <img src="tree-ring.jpeg" alt="Tree Ring">
+      <img src="flower-garden.jpeg" alt="Flower Garden">
+      <img src="blackberry-plants.jpeg" alt="Blackberry Plants">
+      <img src="pear-tree-orchard.jpeg" alt="Pear Tree">
+      <img src="apple-tree-orchard.jpeg" alt="Apple Tree">
+      <img src="jalopeno-plant-orchard.jpeg" alt="Jalapeno Plant">
+      <img src="willow-plant-orchard.jpeg" alt="Willow Plant">
+      <img src="black-current-orchard.jpeg" alt="Black Currant">
+      <img src="watermelon-orchard.jpeg" alt="Watermelon">
+      <img src="cauliflower-plant.jpeg" alt="Cauliflower">
+      <img src="baby-chick.jpeg" alt="Baby Chick">
+      <img src="cherry-tomatoes-plant.jpeg" alt="Cherry Tomatoes">
+    </div>
+  </div>
+
+  <div class="footer">
+    <div><strong>Location</strong><br/>952 May Street<br/>Saint Paul, MN 55116</div>
+    <div><strong>Hours</strong><br/>Tuesdays and Thursdays<br/>9:00am–12:00pm</div>
+    <div><strong>Contact Miss Rachael</strong><br/>rachaelryan@berrypatchfarmschool.com<br/>Text/call: 612-310-8706</div>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.getElementById("slideShow");
+    const totalSlides = slides.children.length;
+
+    function showSlides() {
+      slideIndex++;
+      if (slideIndex >= totalSlides) slideIndex = 0;
+      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+
+    setInterval(showSlides, 3000);
+  </script>
+</body>
+</html>
