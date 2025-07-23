@@ -14,7 +14,7 @@
       line-height: 1.6;
     }
     header {
-      background: url('blackberry-plants.jpeg') no-repeat center center;
+      background: url('strawberry-tower-plants.jpeg') no-repeat center center;
       background-size: cover;
       padding: 5rem 2rem;
       text-align: center;
@@ -28,6 +28,7 @@
     nav {
       background-color: #b8d8ba;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 2rem;
       padding: 0.75rem;
@@ -37,33 +38,63 @@
       color: #3e5d3e;
       font-weight: bold;
     }
+    .content {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
     .section {
       display: flex;
       flex-wrap: wrap;
+      gap: 2rem;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
-      gap: 2rem;
-    }
-    .section img {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 20px;
     }
     .section-text {
-      flex: 1 1 400px;
-      max-width: 500px;
+      flex: 1 1 300px;
+      max-width: 600px;
+    }
+    .section-image {
+      flex: 1 1 300px;
+      max-width: 400px;
+      text-align: center;
+    }
+    .section-image img {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .gallery-item {
+      max-width: 200px;
+      text-align: center;
+    }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .section-column {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: flex-start;
+      justify-content: center;
     }
     .footer {
       background-color: #eee;
       display: flex;
       justify-content: space-around;
       padding: 2rem;
-      margin-top: 3rem;
       flex-wrap: wrap;
+      text-align: center;
     }
     .footer div {
-      margin-bottom: 1rem;
+      margin: 1rem;
       min-width: 200px;
     }
   </style>
@@ -77,51 +108,85 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="programs.html">Programs</a>
-    <a href="farm.html">Meet the Farm</a>
-    <a href="playground.html">Meet the Playground</a>
-    <a href="whats-growing.html">What's Growing?</a>
-    <a href="faq.html">Frequently Asked Questions</a>
     <a href="enrollment.html">Enrollment</a>
     <a href="contact.html">Contact</a>
+    <a href="farm.html">Meet the Farm</a>
+    <a href="playground.html">Meet the Playground</a>
   </nav>
 
-  <div class="section">
-    <div class="section-text">
-      <h2>The Orchard</h2>
-      <p>Our orchard is filled with fruit trees, shady picnic spots, fairy paths, and nature nooks. Children gather here to read, snack, swing in hammocks, and rest under apple and pear branches. It’s our favorite place to feel the seasons shift.</p>
+  <div class="content">
+    <div class="section">
+      <div class="section-text">
+        <p><strong>Meet the Humans</strong><br><br>
+        Miss Rachael is the heart of the Berry Patch. She’s married to Farmer Ian, and together they’re raising a lively little crew of three kids, two dogs, one cat, and eight curious chickens.  
+        She’s happiest outside — hands in the soil, surrounded by sunshine, sprouts, and singing birds. Whether she’s planting seeds, gathering eggs, or swaying in the green hammock, Miss Rachael brings a deep love of nature into everything she does.
+        <br><br>
+        Beyond her muddy boots and garden gloves, Rachael is also a Licensed Independent Clinical Social Worker (LICSW, MSW). She provides supervision for nephrology social workers and brings her knowledge of empathy, child development, and connection to everything she grows — plants and people alike.
+        <br><br>
+        Berry Patch Farm School grew from its philosophy of "follow the joy.” This farm school blossomed from Miss Rachael’s deepest passions — children, animals, nature, and the wonder of life.
+        Each element of the Berry Patch was lovingly chosen to spark curiosity, nourish growing hearts, and celebrate the magic found in puddle jumping, buzzing bees, fresh-picked berries, and shared laughter.
+        This is a place where joy leads the way.</p>
+      </div>
+      <div class="section-image">
+        <img src="placeholder-woman-gardening.jpeg" alt="Woman in garden with hat">
+      </div>
     </div>
-    <img src="orchard-view1.jpeg" alt="Orchard">
-  </div>
 
-  <div class="section">
-    <img src="watermelon-orchard.jpeg" alt="Garden Beds">
-    <div class="section-text">
-      <h2>The Garden</h2>
-      <p>Our garden is home to raised beds, berry bushes, pollinator plants, and tiny seedlings that grow alongside our Little Farmers. Each child tends their own plot — planting, weeding, watering, and harvesting from spring to fall.</p>
+    <div class="section">
+      <div class="section-text">
+        <h2>Meet the Flock</h2>
+      </div>
     </div>
-  </div>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="falconer-chicken.jpeg" alt="Falcone">
+        <p><strong>Falcone</strong><br>The humbled one who loves Farmer Ian.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="gondolf-chicken.jpeg" alt="Gandolf">
+        <p><strong>Gandolf</strong><br>The bossy leader.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="ghost-chicken.jpeg" alt="Ghost">
+        <p>The one who sneaks into the tomato plants.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="goldie-chicken.jpeg" alt="Goldie">
+        <p>The sweetest one with pom pom cheeks.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="night-hawk-chicken.jpeg" alt="Night Hawk">
+        <p>The gentle one who loves being a mama hen.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="hocus-pocus-chicken.jpeg" alt="Hocus Pocus">
+        <p><strong>Hocus Pocus</strong><br>The baby, who is trying to find her place in the flock.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="euko-chicken.jpeg" alt="Euko">
+        <p><strong>Euko</strong><br>The cat who thinks they are a chicken.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="baby2-chickens.jpeg" alt="Chicks">
+        <p>The newest chicks.</p>
+      </div>
+    </div>
 
-  <div class="section">
-    <div class="section-text">
-      <h2>The Mud Kitchen</h2>
-      <p>Mix, stir, splash! In our outdoor mud kitchen and water table, children create imaginative meals with herbs, petals, dirt, pinecones, and water. It’s a fun space for creative play, sensory exploration, and joyful mess-making.</p>
-    </div>
-    <img src="muddyboots.jpeg" alt="Mud Kitchen">
-  </div>
-
-  <div class="section">
-    <img src="eagles-nest.jpeg" alt="Eagles Nest">
-    <div class="section-text">
-      <h2>Eagles Next</h2>
-      <p>Another feature of the orchard is our Eagles Nest. Our Little Farms help build and maintain the nest and use this space for more pretend play.</p>
-    </div>
-  </div>
-  
-  <div class="section">
-    <img src="nature-weave.jpeg" alt="Nature Weave">
-    <div class="section-text">
-      <h2>The Nature Weave</h2>
-      <p>Our handmade nature weave is an ongoing project where Little Farmers can weave feathers, grass, flowers, and weeds together as one.</p>
+    <div class="section">
+      <div class="section-text">
+        <h2>Meet the Pets</h2>
+        <p>To keep things simple on the farm, our two family pups will not be a part of Farm School, but an introduction seems fitting. They are both kind to humans big and small and you might see their tails wagging through the window or hear their happy barks at seeing you come to play at their house. You are all their best friends.</p>
+      </div>
+      <div class="section-column">
+        <div class="gallery-item">
+          <img src="placeholder-black-lab.jpeg" alt="Black Lab">
+          <p>The empath who loves to work with Farmer Ian.</p>
+        </div>
+        <div class="gallery-item">
+          <img src="lilly-dog.jpeg" alt="Lilly">
+          <p><strong>Lilly</strong><br>The mama, who needs to stay close to her human kids.</p>
+        </div>
+      </div>
     </div>
   </div>
 
