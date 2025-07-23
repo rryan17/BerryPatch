@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Berry Patch Farm School | What's Growing?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Berry Patch Farm School | What's Growing</title>
   <style>
     body {
       font-family: "Georgia", serif;
@@ -14,7 +14,7 @@
       line-height: 1.6;
     }
     header {
-      background: url('grapevine-plants.jpeg') no-repeat center center;
+      background: url('garden-banner.jpg') no-repeat center center;
       background-size: cover;
       padding: 5rem 2rem;
       text-align: center;
@@ -24,11 +24,6 @@
       font-size: 3rem;
       margin: 0;
       text-shadow: 2px 2px 4px #5a3d2b;
-    }
-    header p {
-      font-size: 1.25rem;
-      margin-top: 1rem;
-      text-shadow: 1px 1px 2px #5a3d2b;
     }
     nav {
       background-color: #b8d8ba;
@@ -43,22 +38,72 @@
       color: #3e5d3e;
       font-weight: bold;
     }
-    .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-    }
-    .slides {
+    .content {
+      padding: 2rem;
       display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .text-block {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .image-gallery img {
+      max-width: 300px;
       width: 100%;
-      transition: transform 1s ease-in-out;
+      border-radius: 15px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
     }
-    .slides img {
-      min-width: 100%;
-      height: auto;
+
+    /* Flower patch styles */
+    .flower-garden {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 4rem auto;
+      max-width: 600px;
+    }
+    .flower {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      border-radius: 50%;
+      position: relative;
+      transition: transform 0.4s ease;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    .flower:hover {
+      transform: scale(1.2) rotate(10deg);
+    }
+    .petal {
+      width: 20px;
+      height: 40px;
+      background: #ff69b4;
+      position: absolute;
+      top: 30px;
+      left: 40px;
       border-radius: 10px;
+      transform-origin: bottom center;
+      transition: transform 0.3s ease;
     }
+    .flower:hover .petal {
+      transform: rotateX(180deg);
+    }
+    .petal:nth-child(1) { transform: rotate(0deg); top: -10px; left: 40px; }
+    .petal:nth-child(2) { transform: rotate(72deg); top: 5px; left: 70px; }
+    .petal:nth-child(3) { transform: rotate(144deg); top: 35px; left: 70px; }
+    .petal:nth-child(4) { transform: rotate(216deg); top: 45px; left: 40px; }
+    .petal:nth-child(5) { transform: rotate(288deg); top: 20px; left: 10px; }
+
     .footer {
       background-color: #eee;
       display: flex;
@@ -71,44 +116,79 @@
       margin-bottom: 1rem;
       min-width: 200px;
     }
+
+    @media (max-width: 600px) {
+      nav {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .image-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
+
+  <!-- Free cute blip sound (from pixabay CDN) -->
+  <audio id="blip-sound" src="https://cdn.pixabay.com/download/audio/2023/03/01/audio_ae02c4823a.mp3?filename=click-124467.mp3" preload="auto"></audio>
 </head>
 <body>
   <header>
-    <h1>What's Growing?</h1>
-    <p>Take a look at what we are growing in the Berry Patch.</p>
+    <h1>What's Growing in the Garden?</h1>
   </header>
 
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="programs.html">Programs</a>
-    <a href="farm.html">Meet the Farm</a>
-    <a href="playground.html">Meet the Playground</a>
-    <a href="whats-growing.html">What's Growing?</a>
-    <a href="faq.html">Frequently Asked Questions</a>
     <a href="enrollment.html">Enrollment</a>
     <a href="contact.html">Contact</a>
+    <a href="farm.html">Meet the Farm</a>
+    <a href="playground.html">Meet the Playground</a>
+    <a href="faq.html">FAQ</a>
   </nav>
 
-  <div class="slideshow-container">
-    <div class="slides" id="slideShow">
-      <img src="tomato-harvest.jpeg" alt="Tomato Harvest">
-      <img src="strawberry-plants.jpeg" alt="Strawberry Plants">
-      <img src="grapevine-plants.jpeg" alt="Grapevine">
-      <img src="tree-ring.jpeg" alt="Tree Ring">
-      <img src="flower-garden.jpeg" alt="Flower Garden">
-      <img src="blackberry-plants.jpeg" alt="Blackberry Plants">
-      <img src="pear-tree-orchard.jpeg" alt="Pear Tree">
-      <img src="apple-tree-orchard.jpeg" alt="Apple Tree">
-      <img src="jalopeno-plant-orchard.jpeg" alt="Jalapeno Plant">
-      <img src="willow-plant-orchard.jpeg" alt="Willow Plant">
-      <img src="black-current-orchard.jpeg" alt="Black Currant">
-      <img src="watermelon-orchard.jpeg" alt="Watermelon">
-      <img src="cauliflower-plant.jpeg" alt="Cauliflower">
-      <img src="baby-chick.jpeg" alt="Baby Chick">
-      <img src="cherry-tomatoes-plant.jpeg" alt="Cherry Tomatoes">
+  <div class="content">
+    <div class="text-block">
+      <p>Our garden is always full of surprises! Take a peek at what's blooming and growing right now:</p>
     </div>
+
+    <div class="image-gallery">
+      <img src="seedlings.jpg" alt="Seedlings Sprouting">
+      <img src="carrot-bed.jpg" alt="Carrot Garden Bed">
+    </div>
+
+    <div class="text-block">
+      <p>Every child has their own garden bed, and the group helps tend to the berry patch, herbs, and flower beds too!</p>
+    </div>
+
+    <!-- 🌼 Interactive Flower Patch -->
+    <section class="flower-garden">
+      <div class="flower" onclick="playBlip()">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+      </div>
+      <div class="flower" onclick="playBlip()">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+      </div>
+      <div class="flower" onclick="playBlip()">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+      </div>
+    </section>
   </div>
 
   <div class="footer">
@@ -118,17 +198,13 @@
   </div>
 
   <script>
-    let slideIndex = 0;
-    const slides = document.getElementById("slideShow");
-    const totalSlides = slides.children.length;
-
-    function showSlides() {
-      slideIndex++;
-      if (slideIndex >= totalSlides) slideIndex = 0;
-      slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+    function playBlip() {
+      const blip = document.getElementById('blip-sound');
+      if (blip) {
+        blip.currentTime = 0;
+        blip.play();
+      }
     }
-
-    setInterval(showSlides, 3000);
   </script>
 </body>
 </html>
