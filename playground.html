@@ -14,7 +14,7 @@
       line-height: 1.6;
     }
     header {
-      background: url('orchard-view1.jpeg') no-repeat center center;
+      background: url('pear-harvest-orchard.jpeg') no-repeat center center;
       background-size: cover;
       padding: 5rem 2rem;
       text-align: center;
@@ -42,35 +42,38 @@
       padding: 2rem;
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 3rem;
     }
-    .text-block {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .image-gallery {
+    .section {
       display: flex;
       flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
       justify-content: center;
-      gap: 1.5rem;
     }
-    .image-gallery img {
-      max-width: 300px;
-      width: 100%;
-      border-radius: 15px;
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    .section-text {
+      flex: 1 1 300px;
+      max-width: 600px;
+    }
+    .section-image {
+      flex: 1 1 300px;
+      max-width: 400px;
+      text-align: center;
+    }
+    .section-image img {
+      max-width: 100%;
+      border-radius: 12px;
     }
     .footer {
       background-color: #eee;
       display: flex;
       justify-content: space-around;
       padding: 2rem;
-      margin-top: 3rem;
       flex-wrap: wrap;
+      text-align: center;
     }
     .footer div {
-      margin-bottom: 1rem;
+      margin: 1rem;
       min-width: 200px;
     }
   </style>
@@ -84,47 +87,51 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="programs.html">Programs</a>
-    <a href="farm.html">Meet the Farm</a>
-    <a href="playground.html">Meet the Playground</a>
-    <a href="whats-growing.html">What's Growing?</a>
-    <a href="faq.html">Frequently Asked Questions</a>
     <a href="enrollment.html">Enrollment</a>
     <a href="contact.html">Contact</a>
+    <a href="farm.html">Meet the Farm</a>
+    <a href="playground.html">Meet the Playground</a>
   </nav>
 
   <div class="content">
-    <div class="text-block">
-      <p>Berry Patch Farm School has two main outdoor locations: <br><br>
-      The Backyard and The Orchard.</p>
+    <div class="section">
+      <div class="section-text">
+        <h2>Mud and Water Kitchen</h2>
+        <p>Get messy, experiment, and cook up muddy masterpieces! Little Farmers love splashing, scooping, and stirring their way through this sensory-rich outdoor play zone. Bare feet welcome.</p>
+      </div>
+      <div class="section-image">
+        <img src="mud-feet.jpeg" alt="Child with muddy feet playing outside">
+      </div>
     </div>
 
-    <div class="image-gallery">
-      <img src="pear-harvest-orchard.jpeg" alt="Pear Harvest">
-      <img src="muddy-boots.jpeg" alt="Muddy Boots">
+    <div class="section">
+      <div class="section-text">
+        <h2>Orchard and Gardens</h2>
+        <p>Each child will have their own raised garden bed! Little Farmers can grow their own snack — tomatoes, watermelon, or celery for ants-on-a-log — and are encouraged to plant something they don’t like. With patience and pride, broccoli, beets, and brussels sprouts become badges of bravery and accomplishment.</p>
+      </div>
+      <div class="section-image">
+        <img src="orchard-view1.jpeg" alt="View of orchard with garden beds">
+      </div>
     </div>
 
-    <div class="text-block">
-      <p>There are plants everywhere, but most of our gardening will take place at the orchard.</p>
+    <div class="section">
+      <div class="section-text">
+        <h2>Backyard</h2>
+        <p>This is where community gathers. Chicks scratch the ground near bare toes, imagination blooms under the trees, and quiet moments are shared with nature’s smallest friends.</p>
+      </div>
+      <div class="section-image">
+        <img src="chicks-and-mama.jpeg" alt="Hen and chicks walking through the backyard">
+      </div>
     </div>
 
-    <div class="image-gallery">
-      <img src="blackberry-plants.jpeg" alt="Blackberry Plants">
-      <img src="tomato-harvest.jpeg" alt="Tomato Harvest">
+    <div class="section">
+      <div class="section-text">
+        <h2>Eagles Nest</h2>
+        <p>Welcome to the treetop sanctuary! The Eagle’s Nest is a cozy corner of the orchard where Little Farmers can create, pretend, relax, and build using foraged sticks, twigs, and leaves. It’s imagination in motion.</p>
+      </div>
+      <div class="section-image">
+        <img src="sticks.jpeg" alt="Nest built from sticks in the orchard">
+      </div>
     </div>
 
-    <div class="text-block">
-      <p>Each Little Farmer will have their own garden bed at the orchard. Please visit the FAQ page for more information on Little Farmer's garden beds.</p>
-    </div>
-
-    <div class="image-gallery">
-      <img src="strawberry-plants.jpeg" alt="Strawberry Plants">
-    </div>
-  </div>
-
-  <div class="footer">
-    <div><strong>Location</strong><br/>952 May Street<br/>Saint Paul, MN 55116</div>
-    <div><strong>Hours</strong><br/>Tuesdays and Thursdays<br/>9:00am–12:00pm</div>
-    <div><strong>Contact Miss Rachael</strong><br/>rachaelryan@berrypatchfarmschool.com<br/>Text/call: 612-310-8706</div>
-  </div>
-</body>
-</html>
+    <div cl
