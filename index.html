@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -20,8 +20,9 @@
     nav {
       background-color: #e7d8c9;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem;
+      gap: 1rem;
       padding: 1rem;
     }
     nav a {
@@ -29,12 +30,17 @@
       color: #3e3e3e;
       font-weight: bold;
     }
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     main {
       max-width: 800px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    h1 {
+    h1, h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
     }
@@ -43,11 +49,17 @@
       line-height: 1.6;
     }
     footer {
-      text-align: center;
-      margin-top: 4rem;
-      padding: 2rem;
-      font-size: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
       background-color: #e7d8c9;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    footer div {
+      margin: 1rem;
+      min-width: 200px;
     }
   </style>
 </head>
@@ -65,25 +77,4 @@
     <a href="whats-growing.html">What's Growing?</a>
     <a href="faq.html">Frequently Asked Questions</a>
     <a href="enrollment.html">Enrollment</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <main>
-    <h2>Welcome!</h2>
-    <p>Welcome to <strong>Berry Patch Farm School</strong>. We are a nature-rich, in-home program for young children ages 2–5 years. Our days are filled with garden play, animal visits, and seasonal magic.
-    </p>
-
-    <p>Located in the heart of <strong>Highland Park</strong>, Saint Paul, we offer joyful early childhood experiences inspired by the land, seasons, and the belief that young children thrive in nature-based, play-centered environments.</p>
-
-    <p><em>Opening soon — we can’t wait to meet you!</em></p>
-  </main>
-    </div>
-  </div>
-
-  <div class="footer">
-    <div><strong>Location</strong><br/>952 May Street<br/>Saint Paul, MN 55116</div>
-    <div><strong>Hours</strong><br/>Tuesdays and Thursdays<br/>9:00am–12:00pm</div>
-    <div><strong>Contact Miss Rachael</strong><br/>rachaelryan@berrypatchfarmschool.com<br/>Text/call: 612-310-8706</div>
-  </div>
-</body>
-</html>
+    <a href="contact.html">Co
