@@ -32,8 +32,9 @@
       background-color: #b8d8ba;
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      padding: 0.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 0.5rem 1rem;
     }
     nav a {
       text-decoration: none;
@@ -62,6 +63,20 @@
     .image-section img {
       width: 100%;
       border-radius: 12px;
+    }
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      background-color: #e7d8c9;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+    footer div {
+      margin: 1rem;
+      min-width: 200px;
     }
   </style>
 </head>
@@ -96,10 +111,10 @@
     </div>
   </div>
 
- <div class="footer">
+  <footer>
     <div><strong>Location</strong><br/>952 May Street<br/>Saint Paul, MN 55116</div>
     <div><strong>Hours</strong><br/>Tuesdays and Thursdays<br/>9:00am–12:00pm</div>
     <div><strong>Contact Miss Rachael</strong><br/>rachaelryan@berrypatchfarmschool.com<br/>Text/call: 612-310-8706</div>
-  </div>
+  </footer>
 </body>
 </html>
